@@ -1,10 +1,3 @@
-// let today=new Date();
-// let str_today=today.toISOString().split('T')[0];
-$(window).on("load resize ", function() {
-    var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-    $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
-
 $.ajax({
     url: 'api/list',
     dataType: 'json',
@@ -46,7 +39,6 @@ $.ajax({
     url:'api/min_date',
     dataType:'json',
     success: function (data) {
-        console.log(data);
         if(data.error)
             console.log(data.error)
         else
@@ -57,7 +49,6 @@ $.ajax({
     url:'api/max_date',
     dataType:'json',
     success: function (data) {
-        console.log(data);
         if(data.error)
             console.log(data.error)
         else {
@@ -69,11 +60,4 @@ $.ajax({
 });
 $('#date').change(function () {
     rates($('#date').val());
-});
-$.ajax({
-    url:'api',
-    dataType: 'json',
-    success: function (data) {
-        console.log(data);
-    }
 });
