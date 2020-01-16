@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^api(/(.*))?$ /rest_api.php
+Redirect 302 /database_migration.php /

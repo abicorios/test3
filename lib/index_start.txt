@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсы валют</title>
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+</head>
+<body>
