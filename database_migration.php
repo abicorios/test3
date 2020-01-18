@@ -1,7 +1,7 @@
 <?php
 require_once 'lib/database_connection.php';
 mysqli_query($connection, 'drop table if exists currency');
-mysqli_query($connection, 'create table currency (valuteID varchar(6), numCode varchar(3), charCode varchar(3), name varchar(50), value float, date date, unique key id_all(valuteID,numCode,charCode,name,value,date))');
+mysqli_query($connection, 'create table currency (valuteID varchar(6), numCode varchar(3), charCode varchar(3), name varchar(50) character set utf8, value float, date date, unique key id_all(valuteID,numCode,charCode,name,value,date))');
 for($i=0;$i<30;$i++) {
     echo "load day -$i\n";
     flush();
